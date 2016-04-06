@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    # 転送を有効にする
+    RewriteEngine On
+    # public_htmlフォルダ以外へのアクセスは転送の対象とする
+    RewriteCond %{REQUEST_URI} !^/sakura-workflow/public_html(.*)$ [NC,OR]
+    # public_htmlフォルダの実ファイルのみアクセスを許す
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+    # それ以外のリクエストはindex.phpに転送する
+    RewriteRule .* public_html/index.php [L]
+</IfModule>

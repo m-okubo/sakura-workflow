@@ -1,0 +1,14 @@
+@CHARSET "utf-8";
+
+body {
+    background-color: #fcc;
+}
+
+td {
+    vertical-align: top;
+}
+
+.error {
+    color: #f00;
+    font-size: small;
+}

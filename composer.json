@@ -1,0 +1,21 @@
+{
+    "name": "pocketsoft/sakura-workflow",
+    "authors": [
+        {
+            "name": "PocketSoft, Inc.",
+            "email": "m.okubo@pocket-soft.co.jp"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "@stable"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.5.*",
+        "phpunit/phpunit-skeleton-generator": "*",
+        "apigen/apigen": "*",
+        "squizlabs/php_codesniffer": "2.*"
+    },
+    "autoload": {
+        "psr-4": {"SakuraWf\\": "src/SakuraWf"}
+    }
+}

@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+    # 転送を有効にする
+    RewriteEngine On
+    # public_htmlフォルダの実ファイルのみアクセスを許す
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+    # それ以外のリクエストはindex.phpに転送する
+    RewriteRule .* index.php [L]
+</IfModule>
